@@ -7,10 +7,3 @@
 	* BOJ - 백준
 	* SEA - 삼성 SW Expert Acadamy
 	* PGS - 프로그래머스
-  
-# Commit 규칙
-* commit 메세지: 문제이름 / 걸린시간
-* 터미널 작성법:
-```
-git commit -m "Hello World / 1분"
-```
