@@ -31,4 +31,5 @@ public class Main {
 substring() - 문자열의 특정 부분을 잘라내는 데 사용
 substring(int startIndex, int endIndex) - startIndex(포함)부터 endIndex(불포함)까지의 문자열을 리턴
 ex) "Hello".substring(2,4) -> "ll"
+참고 - https://hianna.tistory.com/534
 */
