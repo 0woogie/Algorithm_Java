@@ -13,7 +13,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             A[i] = new mData(Integer.parseInt(br.readLine()), i);
         }
-        Arrays.sort(A);
+        Arrays.sort(A); //여기서 compareTo() 내부적으로 사용
         int max = 0;
         for (int i = 0; i < n; i++) {
             if (max < A[i].index - i)
