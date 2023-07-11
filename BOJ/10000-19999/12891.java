@@ -153,3 +153,43 @@ public class Main {
     }
 }
 */
+
+/*
+두 번째 풀이
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int s = sc.nextInt();
+		int p = sc.nextInt();
+		String strArray = sc.next();
+		char[] charArray = strArray.toCharArray();
+		
+		int[] checkArr = new int[4];
+		for(int i=0; i<4; i++) {
+			checkArr[i] = sc.nextInt();
+		}
+		String str = "ACGT";
+		int[] myArr = new int[4];
+		
+		for(int i=0; i<p; i++) {
+			myArr[str.indexOf(charArray[i])]++;
+		}
+		int result = 0;
+		for(int i=0; i<=s-p; i++) {
+			//조건 맞는지 체크
+			int check = 0;
+			for(int j=0; j<str.length(); j++) {
+				if(myArr[j]>=checkArr[j]) check++;
+			}
+			if(check==4) result++;
+			if(i==s-p) break;
+			//앞에 하나 빼기
+			myArr[str.indexOf(charArray[i])]--;
+			//뒤에 하나 더하기
+			myArr[str.indexOf(charArray[i+p])]++;
+		}
+		System.out.println(result);
+	}
+*/
