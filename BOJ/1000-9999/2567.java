@@ -22,8 +22,8 @@ public class B2567 {
 		int result = 0;
 		for(int i=0; i<100; i++) {
 			for(int j=0; j<100; j++) {
-				if(arr[i][j]==1) {
-					for(int k=0; k<4; k++) {
+				if(arr[i][j]==1) { //검은색 색종이 영역인 경우
+					for(int k=0; k<4; k++) { //주변(상,하,좌,우)의 0 개수 세기
 						if(arr[i+dx[k]][j+dy[k]]==0) result++;
 					}
 				}
