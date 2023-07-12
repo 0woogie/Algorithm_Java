@@ -41,3 +41,29 @@ public class B2493 {
 		for(int i=1; i<n+1; i++) System.out.print(result[i]+" ");
 	}
 }
+
+/*
+//Stack에 int형 배열로 인덱스와 값을 넣어서 구현한 풀이법
+public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		Stack<int[]> stack = new Stack<>();
+		for(int i=1; i<n+1; i++) {
+			int top = Integer.parseInt(st.nextToken());
+			while(!stack.isEmpty()) {
+				if(stack.peek()[1]>top) {
+					System.out.print(stack.peek()[0] + " ");
+					break;
+				}
+				stack.pop();
+			}
+			if(stack.isEmpty()) 
+				System.out.print("0 ");
+			stack.push(new int[] {i, top});
+		}
+	}
+
+ 참고 - https://moonsbeen.tistory.com/204
+*/
