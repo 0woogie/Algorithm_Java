@@ -7,3 +7,4 @@
 	* BOJ - 백준
 	* SEA - 삼성 SW Expert Acadamy
 	* PGS - 프로그래머스
+ 	* JOL - 정올
