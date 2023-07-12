@@ -47,3 +47,39 @@ StringBuffer: 문자열 연산 많고, 멀티쓰레드 환경인 경우
 StringBuilder: 문자열 연산 많고, 단일쓰레드 환경이거나 동기화 고려 안 해도 되는 경우
 참고 - https://dev-jwblog.tistory.com/108
 */
+
+/*
+//구조만 조금 다른 내 풀이
+import java.util.Scanner;
+import java.util.Stack;
+
+public class B1874 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		StringBuilder sb = new StringBuilder();
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		for(int i=0; i<n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		Stack<Integer> stack = new Stack<>();
+		int cnt = 0;
+		for(int i=0; i<n; i++) {
+			int now = arr[i];
+			while(cnt<now) {
+				cnt++;
+				stack.push(cnt);
+				sb.append("+\n");
+			}
+			int top = stack.pop();
+			if(top==now) {
+				sb.append("-\n");
+			} else {
+				System.out.println("NO");
+				return;
+			}
+		}
+		System.out.println(sb);
+	}
+}
+*/
