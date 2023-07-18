@@ -32,11 +32,16 @@ public class S5209 {
 	}
 	
 	private static void dfs(int depth, int sum) {
+		//2.가지치기: 가장 위에서, 가장 마지막에!!!!
+		//가지치기 항상 성공하는 경우: 최소값 찾기
+		//가지치기 힘든 경우: 최대값, 경우의 수..
 		if(sum>result) return; //지금까지의 생산 비용이 result보다 큰 경우 재귀를 계속해봐야 최소 생산 비용이 나오는 경우가 아님 -> 불필요한 경로 차단
+		//0.종료조건: 정답처리
 		if(depth==N) {
 			if(sum<result) result = sum;
 			return;
 		}
+		//1.하부호출
 		for(int i=0; i<N; i++) {
 			if(!visited[i]) {
 				visited[i] = true;
