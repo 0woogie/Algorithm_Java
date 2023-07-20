@@ -72,4 +72,4 @@ class Edge implements Comparable<Edge> {
 }
 
 //가중치를 기준으로 자동 정렬을 위해 PriorityQueue 자료구조 사용
-//객체 간 비교를 위해 Comparable 사용
+//객체 간 비교를 위해 Comparable 사용 (참고-https://st-lab.tistory.com/243)
