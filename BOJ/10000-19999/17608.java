@@ -23,3 +23,5 @@ public class B17608 {
 		System.out.println(cnt);
 	}
 }
+
+//굳이 Stack 쓸 필요가 없긴 하다.
