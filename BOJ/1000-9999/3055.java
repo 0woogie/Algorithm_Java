@@ -17,7 +17,7 @@ public class B3055 {
 		Queue<Point> queue = new LinkedList<>();
 		int[] dx = {-1,1,0,0};
 		int[] dy = {0,0,-1,1};
-    int[][] visited = new int[r][c];
+    		int[][] visited = new int[r][c];
 		
 		Point p = null;
 		for(int i=0; i<r; i++) {
