@@ -85,5 +85,6 @@ public class B1927 {
 		}
 		return top;
 	}
-
 }
+
+//최소힙을 직접 구현해보자~.~
