@@ -20,14 +20,15 @@ public class B2042 {
 		
 		nums = new long[N];
 		for (int i=0; i<N; i++) {
-            nums[i] = Long.parseLong(br.readLine());
-        }
+            		nums[i] = Long.parseLong(br.readLine());
+        	}
 		
 		//Indexed Tree 사용
 		S = 1;
 		while(S<N) {
 			S *= 2;
 		}
+		
 		tree = new long[2*S];
 		
 		init(); //Init (Bottom-Up)
@@ -73,14 +74,15 @@ public class B2042 {
 	
 	static long query(int left, int right, int node, int queryLeft, int queryRight) {
 		if (queryRight<left || right<queryLeft) {
-            return 0;
-        } else if(queryLeft<=left && right<=queryRight) {
-        	return tree[node];
-        } else {
-        	int mid = (left+right)/2;
-        	return query(left, mid, node*2, queryLeft, queryRight) + query(mid+1, right, node*2+1, queryLeft, queryRight);
-        }
+            		return 0;
+        	} else if(queryLeft<=left && right<=queryRight) {
+        		return tree[node];
+        	} else {
+        		int mid = (left+right)/2;
+        		return query(left, mid, node*2, queryLeft, queryRight) + query(mid+1, right, node*2+1, queryLeft, queryRight);
+        	}
 	}
+
 }
 
 //int, long으로 인한 런타임 에러(NumberFormat) 주의!!!
