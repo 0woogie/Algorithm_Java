@@ -48,7 +48,7 @@ public class B2243 {
 			if(tree[node*2]>=target) {
 				return query(left, mid, node*2, target);
 			} else {
-        target -= tree[node*2]; //중요한 부분!!!
+				target -= tree[node*2]; //중요한 부분!!!
 				return query(mid+1, right, node*2+1, target);
 			}
 		}
