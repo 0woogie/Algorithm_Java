@@ -10,8 +10,8 @@ import java.util.StringTokenizer;
 public class BOJ_19583 {
 
 	public static void main(String[] args) throws IOException {
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			StringTokenizer st = new StringTokenizer(br.readLine());
+	    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 	        String S = st.nextToken();
 	        String E = st.nextToken();
 	        String Q = st.nextToken();
