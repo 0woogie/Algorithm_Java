@@ -8,12 +8,13 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 public class BOJ_19583 {
+
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		String S = st.nextToken();
-		String E = st.nextToken();
-		String Q = st.nextToken();
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			StringTokenizer st = new StringTokenizer(br.readLine());
+	        String S = st.nextToken();
+	        String E = st.nextToken();
+	        String Q = st.nextToken();
 
 	        Set<String> before = new HashSet<>(); //개강총회 이전에 입장한 학생 담는 Set
 	        Set<String> after = new HashSet<>(); //개강총회 이후에 퇴장한 학생 담는 Set
@@ -39,6 +40,7 @@ public class BOJ_19583 {
 	        }
 	        System.out.println(result);
 	}
+
 }
 
 //모든 시간의 입력은 HH:MM형식으로 동일하기 때문에 compareTo를 사용한 시간의 비교가 가능함
