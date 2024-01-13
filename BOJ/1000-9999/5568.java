@@ -26,6 +26,7 @@ public class B5568 {
 	static void DFS(int count, String result) {
 		if(count==k) {
 			set.add(result);
+			return;
 		}
 		for(int i=0; i<n; i++) {
 			if(!visited[i]) {
