@@ -43,4 +43,6 @@ public class B15663 {
 	}
 }
 
-//다른 풀이 - https://stonage.tistory.com/241 (저장한 순서대로 출력할 수 있고 중복도 허용하지 않는 LinkedHashSet 사용)
+//다른 풀이 - 저장한 순서대로 출력할 수 있고 중복도 허용하지 않는 LinkedHashSet 사용
+//참고 링크1 - https://codingrapper.tistory.com/21
+//참고 링크2 - https://stonage.tistory.com/241
