@@ -46,5 +46,6 @@ class Jewel implements Comparable<Jewel> {
 	}
 }
 
+//처음에 int[][] 만들어서 Arrays.sort() 했더니 시간초과 발생
 //Comparable & 우선순위큐 이용
 //Comparable & ArrayList 이용하는 방법도 있음 (BOJ1922 참고)
