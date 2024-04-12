@@ -56,3 +56,17 @@ public class B2667 {
 }
 
 //dx, dy 배열을 이용한 방식으로도 구현할 수 있음
+/*
+static void DFS(int x, int y) {
+	visited[x][y] = true;
+	cnt++;
+	for(int d=0; d<4; d++) {
+		int nx = x + dx[d];
+		int ny = y + dy[d];
+		if(nx<0 || nx>=N || ny<0 || ny>=N)
+			continue;
+		if(!visited[nx][ny] && graph[nx][ny]==1)
+			dfs(nx, ny);
+	}
+}
+*/
