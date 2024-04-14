@@ -2,16 +2,18 @@
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class KnightBattle {
 	
-	static int[] dx = {-1, 0, 1, 0};
+	static int[] dx = {-1, 0, 1, 0}; //위 오 아 왼
 	static int[] dy = {0, 1, 0, -1};
 	static Knight[] knights;
 	static int L, N;
 	static int[][] graph, nawabari;
 	static boolean[][] target;
+	static boolean[] marking;
 	
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,6 +45,7 @@ public class KnightBattle {
 			
 			//각 기사들마다 현재 본인이 밀어야 하는 기사들 번호를 저장해두고 나중에 밀기!!!
 			target = new boolean[N+1][N+1]; //target[a][b]: a가 b를 나중에 밀기
+			marking = new boolean[N+1]; //해당 턴에 move했으면 체크해두기 (중복 명령 수행 방지)
 			
 			st = new StringTokenizer(br.readLine());
 			int num = Integer.parseInt(st.nextToken()); //기사 번호
@@ -156,6 +159,9 @@ public class KnightBattle {
 	
 	static void move(int d, int num) { //이동 방향, 이동할 기사 번호
 		
+		if(marking[num])
+			return; //이미 이동한 기사인 경우
+		
 		Knight knight = knights[num];
 		
 		//해당 기사가 밀 기사부터 밀고 나서 이동하기!!!
@@ -190,6 +196,8 @@ public class KnightBattle {
 				}
 			}
 		}
+		//이동 완료 후에는 꼭 표시를 해주자
+		marking[num] = true;
 	}
 }
 
@@ -210,3 +218,31 @@ class Knight {
 		this.now = k;
 	}
 }
+
+/*
+아래 테스트케이스에서 에러가 발생해서 boolean[] marking을 추가함
+
+4 5 13
+1 1 0 0
+1 0 0 0
+1 1 1 1
+1 1 0 0
+4 1 1 1 5
+1 1 1 3 7
+2 2 1 1 10
+2 3 1 2 5
+3 2 1 3 13
+2 2
+1 2
+5 2
+1 2
+5 3
+1 2
+5 3
+5 0
+4 2
+2 2
+3 1
+1 2
+1 0
+*/
