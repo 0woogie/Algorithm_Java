@@ -36,3 +36,31 @@ public class S1233 {
 		}
 	}
 }
+
+/*
+//다른 풀이
+//Key Point - 내부노드면 연산자여야 하고, 리프노드면 숫자여야 함
+public class S1233 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		for(int test_case = 1; test_case <= 10; test_case++) {
+			int N = Integer.parseInt(br.readLine());
+			boolean chk = true;
+			for(int n=1; n<=N; n++) {
+				StringTokenizer st = new StringTokenizer(br.readLine());
+				st.nextToken(); //첫 번째 정점 번호는 패스
+				char c = st.nextToken().charAt(0);
+				if(st.hasMoreTokens()) { //내부 노드인 경우 -> 연산자여야 함
+					if(c!='+' && c!='-' && c!='*' && c!='/')
+						chk = false;
+				} else { //리프 노드인 경우 -> 숫자여야 함
+					if(c=='+' || c=='-' || c=='*' || c=='/')
+						chk = false;
+				}
+			}
+			if(chk) System.out.println("#"+test_case+" "+1);
+			else System.out.println("#"+test_case+" "+0);
+		}
+	}
+}
+*/
