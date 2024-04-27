@@ -8,18 +8,18 @@ class Solution {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder()); //PriorityQueue를 이용한 풀이
 		    
         for(int num : priorities) {
-			  pq.add(num);
-		    }
-		    while(!pq.isEmpty()) {
-			    for(int i=0; i<priorities.length; i++) {
-				    if(priorities[i] == pq.peek()) {
-					    pq.poll();
-					    answer++;
-					    if(i == location)
-						    return answer;
-				    }
-			    }
-		    }  
+		pq.add(num);
+	}
+	while(!pq.isEmpty()) {
+		for(int i=0; i<priorities.length; i++) {
+			if(priorities[i] == pq.peek()) {
+				pq.poll();
+				answer++;
+				if(i == location)
+					return answer;
+			}
+		}
+	}  
         return answer;
     }
 }
