@@ -31,7 +31,7 @@ class Solution {
     
     void dfs(int count) {
         if(count==cnt){ //종이조각을 cnt개만큼 선택한 경우
-        	String value = new String(result);
+            String value = new String(result);
             int num = Integer.parseInt(value);
             boolean chk = false;
             for(int i=2; i<num; i++){
@@ -47,9 +47,8 @@ class Solution {
         for(int i=0; i<charArr.length; i++){
             if(!visited[i]){ //선택한 적 없는 종이조각이라면
                 visited[i] = true;
-                result[count++] = charArr[i]; //종이조각 선택 -> result 배열에 저장
-                dfs(count); //재귀호출
-                count--;
+                result[count] = charArr[i]; //종이조각 선택 -> result 배열에 저장
+                dfs(count+1); //재귀호출
                 visited[i] = false;
             }
         }
